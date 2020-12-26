@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Kumbh";
+  font-weight: 400;
+  src: url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Kumbh", sans-serif;
+  background-color: var(--dark-cyan);
+  background-image: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-position: top -300px left -400px, bottom -300px right -400px;
+  background-size: 160%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 325px;
+  margin: 0 auto 2rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card__media-wrapper {
+  position: relative;
+  height: 9rem;
+  background-image: url("./images/bg-pattern-card.svg");
+  background-size: cover;
+}
+.card__media-image {
+  position: relative;
+  border-radius: 50%;
+  border: 4px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+}
+.card__content {
+  background-color: white;
+}
+.card__details {
+  padding-top: 5rem;
+  padding-bottom: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-desaturated-blue);
+}
+.card__age {
+  color: var(--dark-grayish-blue);
+  margin: 0 0 0 0.4rem;
+}
+.card__city {
+  color: var(--dark-grayish-blue);
+  margin-top: 0.5rem;
+}
+.card__divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.card__stats {
+  padding-top: 1.5rem;
+  padding-bottom: 1.7rem;
+  padding-right: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.card__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__stat-count {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-desaturated-blue);
+}
+.card__stat-name {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  color: var(--dark-grayish-blue);
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-color: var(--dark-cyan);
+    background-size: 70%;
+    background-position: top -600px left -270px, bottom -700px right -200px;
+  }
+}
